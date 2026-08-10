@@ -1,0 +1,52 @@
+name: EchoLeads
+description: >-
+  Autonomous AI voice calling sales platform automating outbound/inbound calling, WhatsApp and Instagram lead capture,
+  lead scoring, and appointment scheduling with human handoff. Confirmed agent-native via a live llms.txt; a REST API is
+  self-declared but its documentation page is not publicly retrievable.
+url: https://echoleads.apievangelist.com/apis.yml
+created: '2026-08-10'
+modified: '2026-08-10'
+specificationVersion: '0.21'
+tags:
+  - AI voice sales
+  - AI voice agents
+  - cold calling automation
+  - AI SDR
+  - lead generation
+  - conversational AI
+  - omnichannel sales automation
+  - appointment scheduling
+  - WhatsApp automation
+  - Instagram DM automation
+apis:
+  - name: EchoLeads Platform
+    description: >-
+      EchoLeads provider surfaces. Only the llms.txt agent-native artifacts are confirmed publicly reachable. A REST API
+      is self-described in llms-full.txt but its documentation page returned not-accessible and no base URL, auth model,
+      or machine-readable contract is public.
+    humanURL: https://echoleads.ai
+    baseURL: https://echoleads.ai
+    tags:
+      - AI voice sales
+      - AI voice agents
+      - cold calling automation
+      - AI SDR
+      - lead generation
+      - conversational AI
+      - omnichannel sales automation
+      - appointment scheduling
+      - WhatsApp automation
+      - Instagram DM automation
+    properties:
+      - type: LLMsTxt
+        url: https://echoleads.ai/llms.txt
+      - type: LLMsTxt
+        url: https://echoleads.ai/llms-full.txt
+maintainers:
+  - FN: EchoLeads Support
+    url: mailto:support@echoleads.ai
+generated:
+  by: apis.io/add
+  model: claude-opus-4-8
+  confidence: 80
+  at: '2026-08-10T12:37:29.936Z'
