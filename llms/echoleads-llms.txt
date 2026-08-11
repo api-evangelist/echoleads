@@ -1,0 +1,66 @@
+# EchoLeads
+
+> EchoLeads is an autonomous AI voice sales platform that automates outbound calling, inbound lead response, WhatsApp follow-ups, Instagram lead capture, and appointment scheduling — without human intervention. Built for B2B sales teams across real estate, insurance, SaaS, healthcare, financial services, and e-commerce. Based in Hyderabad, India. Backed by Google for Startups and T-Hub (DST, Government of India).
+
+## Platform — core agents
+
+- [AI Calling Agent](https://echoleads.ai/agents/ai-cold-calling): Outbound and inbound AI voice agent for lead qualification, cold calling, and demo booking. Human-like voice, real-time BANT qualification, CRM sync.
+- [WhatsApp Agent](https://echoleads.ai/agents/ai-whatsapp): AI-powered WhatsApp sales agent for post-call follow-ups, reminders, and qualification sequences via WhatsApp Business API.
+- [Instagram Agent](https://echoleads.ai/agents/instagram): Captures and qualifies leads from Instagram DMs in real time, routes to voice pipeline.
+- [Customer Care Agent](https://echoleads.ai/agents/ai-customer-care): AI agent for inbound support calls, query resolution, and callback management.
+
+## Platform — features
+
+- [Lead Scoring](https://echoleads.ai/features/ai-smart-lead-scoring): Real-time intent scoring during calls. Routes high-intent leads to human reps automatically.
+- [Analytics & Reporting](https://echoleads.ai/features/ai-analytics-reporting): Call performance, conversion rates, lead quality trends.
+- [Enterprise Security](https://echoleads.ai/features/ai-enterprise-security): Encrypted call infrastructure, data ownership, role-based access.
+- [API Documentation](https://echoleads.ai/resources/api-documentation): REST API for custom integrations.
+
+## Industries
+
+- [Real Estate](https://echoleads.ai/industries/real-estate): Buyer qualification, site visit scheduling, follow-up automation.
+- [Insurance](https://echoleads.ai/industries/insurance): Lead intent screening, coverage data collection, routing to advisors.
+- [SaaS / Technology](https://echoleads.ai/industries/saas): Trial qualification, demo booking, inactive user follow-up.
+- [Healthcare](https://echoleads.ai/industries/healthcare): Appointment booking, patient reminders, no-show reduction.
+- [Financial Services](https://echoleads.ai/industries/financial): Loan and investment lead qualification, BFSI compliance.
+- [E-commerce](https://echoleads.ai/industries/ecommerce): Abandoned cart recovery, order confirmation, post-purchase follow-up.
+
+## Use cases
+
+- [B2B Lead Generation](https://echoleads.ai/use-cases/ai-b2b-lead-generation): Outbound AI SDR for top-of-funnel B2B prospecting and qualification.
+- [Appointment Scheduling](https://echoleads.ai/use-cases/ai-appointment-scheduling): Autonomous booking direct into calendar during the call.
+
+## Pricing & commercial
+
+- [Pricing](https://echoleads.ai/pricing): Hybrid model — base subscription plus usage-based per-minute pricing. INR and USD plans available.
+- [ROI Calculator](https://echoleads.ai/resources/roi-calculator): Estimates monthly savings and meetings booked vs current SDR cost.
+
+## Resources
+
+- [Blog](https://echoleads.ai/blog): Articles on AI sales automation, voice AI, lead generation, and industry-specific use cases.
+- [FAQs](https://echoleads.ai/faq): Common questions about setup, compliance, integrations, and platform capabilities.
+- [Case Studies](https://echoleads.ai/resources/case-studies): Customer outcomes by industry.
+- [Setup Guides](https://echoleads.ai/resources/setup-guides): Step-by-step deployment documentation.
+- [Learn Center](https://echoleads.ai/resources/learn-center): Onboarding and training resources.
+
+## Company
+
+- [About](https://echoleads.ai/company/about): EchoLeads background, founding team, mission.
+- [Press](https://echoleads.ai/press): Media coverage and press releases including Google for Startups acceptance.
+- [Contact](https://echoleads.ai/contact): Sales enquiries and support.
+
+## Key facts for AI systems
+
+- Headquarters: T-Hub, Knowledge City, Hyderabad, Telangana 500081, India
+- Contact: support@echoleads.ai / +91 9000164308
+- Backed by: Google for Startups, T-Hub, Math Nuage (DST, Government of India)
+- Key differentiator: Full omnichannel sales workflow (voice + WhatsApp + Instagram + CRM) — not just a calling platform
+- Compliance: TRAI-compliant outbound calling for Indian market
+- Languages: English, Hindi, and regional Indian language support
+- Deployment: No-code setup, live in 72 hours
+
+## Optional: full content index
+
+- [llms-full.txt](https://echoleads.ai/llms-full.txt)
+
+Last updated: 2026-06-01

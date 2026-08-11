@@ -1,0 +1,7 @@
+Contact: mailto:security@echoleads.ai
+Contact: mailto:support@echoleads.ai
+Expires: 2027-04-20T00:00:00.000Z
+Preferred-Languages: en, hi
+Canonical: https://echoleads.ai/.well-known/security.txt
+Policy: https://echoleads.ai/security-policy
+Acknowledgments: https://echoleads.ai/security-hall-of-fame

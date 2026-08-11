@@ -1,0 +1,21 @@
+generated: '2026-08-11'
+method: searched
+source: https://echoleads.ai/llms-full.txt
+limit_count: 0
+headers: []
+status_code_on_exhaustion: null
+note: >-
+  No rate limits are published. EchoLeads self-describes a REST API in llms-full.txt ("trigger
+  calls programmatically, retrieve transcripts, push lead scores to external systems") but the
+  page that would carry the limits — https://echoleads.ai/resources/api-documentation — returns
+  502 Bad Gateway, and no OpenAPI, Postman collection or other machine-readable contract exists
+  on any EchoLeads host to derive limits from. There is also no live unauthenticated endpoint to
+  observe RateLimit-*/Retry-After headers on: api.echoleads.ai resolves but has no listener on
+  80 or 443. An honest zero, recorded rather than omitted.
+limits: []
+evidence:
+  - url: https://echoleads.ai/resources/api-documentation
+    status: 502
+  - url: https://echoleads.ai/llms-full.txt
+    status: 200
+checked: '2026-08-11'

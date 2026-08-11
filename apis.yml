@@ -1,11 +1,19 @@
 name: EchoLeads
 description: >-
-  Autonomous AI voice calling sales platform automating outbound/inbound calling, WhatsApp and Instagram lead capture,
-  lead scoring, and appointment scheduling with human handoff. Confirmed agent-native via a live llms.txt; a REST API is
-  self-declared but its documentation page is not publicly retrievable.
+  EchoLeads is an autonomous AI voice sales platform out of T-Hub, Hyderabad, India, that replaces manual SDR work with
+  AI agents running a full omnichannel workflow: outbound cold calling and inbound response, real-time BANT
+  qualification, WhatsApp Business follow-up, Instagram DM lead capture, live intent-based lead scoring, human handoff,
+  CRM sync, and calendar booking during the call. It sells into real estate, insurance, SaaS, healthcare, financial
+  services and e-commerce, supports English, Hindi and regional Indian languages, and claims TRAI-compliant outbound
+  calling. It is backed by Google for Startups, T-Hub and Math Nuage (DST, Government of India). Agent-native surface is
+  real and verified — a live llms.txt, a full llms-full.txt content index, an RFC 9116 security.txt, and an
+  AI-crawler-permissive robots.txt. The API surface is not: a REST API is self-declared in llms-full.txt (trigger calls,
+  retrieve transcripts, push lead scores) but the documentation page returns 502, api.echoleads.ai has no listener, and
+  no OpenAPI, AsyncAPI, GraphQL SDL, Postman collection or MCP server is published on any host.
+image: https://echoleads.ai/assets/Echoleads%20Pictorial%20Logo%201%20(1).png
 url: https://echoleads.apievangelist.com/apis.yml
 created: '2026-08-10'
-modified: '2026-08-10'
+modified: '2026-08-11'
 specificationVersion: '0.21'
 tags:
   - AI voice sales
@@ -18,12 +26,18 @@ tags:
   - appointment scheduling
   - WhatsApp automation
   - Instagram DM automation
+  - voice AI
+  - sales automation
+  - India
 apis:
   - name: EchoLeads Platform
     description: >-
-      EchoLeads provider surfaces. Only the llms.txt agent-native artifacts are confirmed publicly reachable. A REST API
-      is self-described in llms-full.txt but its documentation page returned not-accessible and no base URL, auth model,
-      or machine-readable contract is public.
+      EchoLeads provider surfaces. The agent-native artifacts (llms.txt, llms-full.txt, security.txt) are confirmed
+      publicly reachable and are saved verbatim in this repo. A REST API for triggering calls, retrieving transcripts
+      and pushing lead scores is self-described in llms-full.txt, but https://echoleads.ai/resources/api-documentation
+      returns 502 Bad Gateway on repeated probes, api.echoleads.ai resolves to an AWS ap-south-1 address with TCP 80 and
+      443 both closed, and no base URL, auth model or machine-readable contract is published anywhere. The baseURL below
+      is the website root, which is what the provider publishes — it is not a verified API host.
     humanURL: https://echoleads.ai
     baseURL: https://echoleads.ai
     tags:
@@ -39,14 +53,69 @@ apis:
       - Instagram DM automation
     properties:
       - type: LLMsTxt
+        url: llms/echoleads-llms.txt
+      - type: LLMsTxt
         url: https://echoleads.ai/llms.txt
       - type: LLMsTxt
         url: https://echoleads.ai/llms-full.txt
 maintainers:
   - FN: EchoLeads Support
+    email: support@echoleads.ai
     url: mailto:support@echoleads.ai
 generated:
   by: apis.io/add
   model: claude-opus-4-8
   confidence: 80
   at: '2026-08-10T12:37:29.936Z'
+common:
+- type: VulnerabilityDisclosure
+  url: security/echoleads-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/echoleads-domain-security.yml
+- type: Security
+  url: security/echoleads-vulnerability-disclosure.yml
+- type: SecurityTxt
+  url: well-known/echoleads-security.txt
+- type: WellKnown
+  url: well-known/echoleads-well-known.yml
+- type: Conformance
+  url: conformance/echoleads-conformance.yml
+- type: Plans
+  url: plans/echoleads-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/echoleads-rate-limits.yml
+- type: Blog
+  url: https://echoleads.ai/blog
+- type: Support
+  url: https://echoleads.ai/faq
+- type: PrivacyPolicy
+  url: https://echoleads.ai/privacy-policy
+- type: TermsOfService
+  url: https://echoleads.ai/terms-of-service
+x-enrichment:
+  date: '2026-08-11'
+  status: minimal
+  pass: local-v1
+  artifacts_added: 8
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: >-
+    EchoLeads links a REST API page from its nav and its own llms.txt, but
+    https://echoleads.ai/resources/api-documentation returns 502 Bad Gateway on every probe while
+    prerendered marketing routes on the same host serve 200 — the Next.js origin behind the
+    uncached routes is down — and api.echoleads.ai resolves to 13.203.84.238 with TCP 80 and 443
+    both closed, so there is no reachable documentation and no OpenAPI, GraphQL SDL, AsyncAPI,
+    Postman collection or MCP server on any EchoLeads host.
+  evidence:
+    - url: https://echoleads.ai/resources/api-documentation
+      status: 502
+    - url: https://echoleads.ai/openapi.json
+      status: 502
+    - url: https://cmsapi.echoleads.ai/openapi.json
+      status: 404
+    - url: https://echoleads.ai/llms.txt
+      status: 200
+    - url: https://echoleads.ai/.well-known/security.txt
+      status: 200
+  checked: '2026-08-11'

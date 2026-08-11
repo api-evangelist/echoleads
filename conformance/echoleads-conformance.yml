@@ -1,0 +1,82 @@
+generated: '2026-08-11'
+method: searched
+source: https://echoleads.ai/llms-full.txt
+note: >-
+  EchoLeads publishes no OpenAPI, AsyncAPI, GraphQL SDL or Postman collection, so nothing here is
+  derived from a contract — every entry below is either a PROVIDER SELF-CLAIM read from its own
+  llms.txt/llms-full.txt, or a transport fact observed on a live probe. Self-claims are recorded
+  as claimed, never as verified: EchoLeads publishes no certification, no audit report and no
+  trust center, and the /security-policy page named by its own security.txt returns 502. No
+  `Compliance` pointer is emitted for this repo, because a marketing claim is not a published
+  compliance program.
+conformance:
+  - id: trai-outbound-calling
+    name: TRAI outbound calling rules (India)
+    conforms: claimed
+    evidence: >-
+      llms.txt "Key facts for AI systems" states "Compliance: TRAI-compliant outbound calling for
+      Indian market"; llms-full.txt expands it to "TRAI-compliant for outbound calling in India,
+      including DND scrubbing, call timing rules, and consent requirements". Provider assertion
+      only — no registration number, TSP linkage, or third-party attestation is published.
+    source: https://echoleads.ai/llms-full.txt
+  - id: rbi-bfsi-calling
+    name: RBI / BFSI calling conduct (India)
+    conforms: claimed
+    evidence: >-
+      llms-full.txt Financial Services section states the platform is "Compliant with Indian RBI
+      and TRAI calling regulations". Named in marketing copy for the BFSI vertical only; no
+      control list or audit is published.
+    source: https://echoleads.ai/llms-full.txt
+  - id: whatsapp-business-api
+    name: WhatsApp Business API
+    conforms: claimed
+    evidence: >-
+      llms-full.txt WhatsApp Agent section states "Integration with WhatsApp Business API". This
+      is a platform integration claim, not a certification; no BSP or Meta Tech Provider listing
+      was found.
+    source: https://echoleads.ai/llms-full.txt
+  - id: indian-data-protection
+    name: Indian data protection requirements (DPDP-adjacent)
+    conforms: claimed
+    evidence: >-
+      llms-full.txt Enterprise Security section claims "compliance with Indian data protection
+      requirements", "full data ownership by the customer" and role-based access control. No
+      DPDP Act reference, DPO contact, or processing agreement is published.
+    source: https://echoleads.ai/llms-full.txt
+  - id: rfc9116-security-txt
+    name: RFC 9116 security.txt
+    conforms: true
+    evidence: >-
+      https://echoleads.ai/.well-known/security.txt returned 200 with a valid, unexpired document
+      carrying Contact, Expires (2027-04-20), Canonical, Policy, Acknowledgments and
+      Preferred-Languages. Verified on a live probe, not claimed.
+    source: https://echoleads.ai/.well-known/security.txt
+  - id: llms-txt
+    name: llms.txt convention
+    conforms: true
+    evidence: >-
+      https://echoleads.ai/llms.txt and /llms-full.txt both returned 200 with well-formed llms.txt
+      structure (H1, blockquote summary, sectioned link lists with descriptions, and a full
+      content index). Verified on a live probe.
+    source: https://echoleads.ai/llms.txt
+  - id: hsts-preload
+    name: HTTP Strict Transport Security
+    conforms: true
+    evidence: >-
+      echoleads.ai serves TLSv1.3 with `Strict-Transport-Security: max-age=31536000;
+      includeSubDomains; preload`. Observed on a live probe. See
+      security/echoleads-domain-security.yml.
+    source: https://echoleads.ai/
+  - id: oauth2
+    name: OAuth 2.0
+    conforms: false
+    evidence: >-
+      No OAuth surface. /.well-known/oauth-authorization-server and
+      /.well-known/oauth-protected-resource both 502, and no auth model of any kind is documented.
+    source: https://echoleads.ai/.well-known/oauth-authorization-server
+  - id: rfc9457
+    name: RFC 9457 problem details
+    conforms: false
+    evidence: No machine-readable contract and no error reference published; nothing to assess.
+    source: https://echoleads.ai/resources/api-documentation
+checked: '2026-08-11'

@@ -1,0 +1,103 @@
+generated: '2026-08-11'
+method: probed
+source: live HTTP probes of https://echoleads.ai and every resolvable EchoLeads host
+note: >-
+  Only /.well-known/security.txt returned a real document. Every other /.well-known/ path on
+  echoleads.ai returned 502 Bad Gateway from nginx — not a 404. The marketing site is a Next.js
+  app whose prerendered/ISR-cached routes serve fine while the origin behind the uncached routes
+  is down, so a 502 here is an origin failure, NOT evidence that the path is unserved. The
+  agent-card probes are therefore inconclusive rather than negative, and no AgentCard artifact or
+  pointer was written (see a2a/ — nothing was authored, per the search-only rule).
+hosts_probed:
+  - host: echoleads.ai
+    reachable: true
+    note: nginx/1.24.0 fronting Next.js; cached routes 200, uncached routes 502
+  - host: cmsapi.echoleads.ai
+    reachable: true
+    note: >-
+      Express service (responds "Cannot GET /"); every /.well-known/ path returns 404. Referenced
+      in the site CSP as an img-src/media-src/connect-src origin — a media/CMS backend, not a
+      documented public API.
+  - host: api.echoleads.ai
+    reachable: false
+    note: >-
+      DNS A record resolves to 13.203.84.238 (AWS ap-south-1) but TCP 80 and 443 are both closed.
+      Nothing is listening. Probed, not assumed.
+  - host: app.echoleads.ai
+    reachable: false
+    note: Resolves to 13.202.72.136; TCP 443 closed.
+  - host: dashboard.echoleads.ai
+    reachable: false
+    note: Resolves to 118.95.35.56; TCP 443 closed.
+  - host: docs.echoleads.ai
+    reachable: false
+    note: No DNS record.
+  - host: developer.echoleads.ai
+    reachable: false
+    note: No DNS record.
+paths:
+  - path: /.well-known/security.txt
+    url: https://echoleads.ai/.well-known/security.txt
+    status: 200
+    content_type: text/plain; charset=UTF-8
+    file: echoleads-security.txt
+    document: true
+  - path: /.well-known/openid-configuration
+    url: https://echoleads.ai/.well-known/openid-configuration
+    status: 502
+    document: false
+  - path: /.well-known/oauth-authorization-server
+    url: https://echoleads.ai/.well-known/oauth-authorization-server
+    status: 502
+    document: false
+  - path: /.well-known/oauth-protected-resource
+    url: https://echoleads.ai/.well-known/oauth-protected-resource
+    status: 502
+    document: false
+  - path: /.well-known/api-catalog
+    url: https://echoleads.ai/.well-known/api-catalog
+    status: 502
+    document: false
+  - path: /.well-known/ai-plugin.json
+    url: https://echoleads.ai/.well-known/ai-plugin.json
+    status: 502
+    document: false
+  - path: /.well-known/agent-card.json
+    url: https://echoleads.ai/.well-known/agent-card.json
+    status: 502
+    document: false
+  - path: /.well-known/agent.json
+    url: https://echoleads.ai/.well-known/agent.json
+    status: 502
+    document: false
+  - path: /.well-known/mcp.json
+    url: https://echoleads.ai/.well-known/mcp.json
+    status: 502
+    document: false
+  - path: /.well-known/security.txt
+    url: https://cmsapi.echoleads.ai/.well-known/security.txt
+    status: 404
+    document: false
+  - path: /.well-known/agent-card.json
+    url: https://cmsapi.echoleads.ai/.well-known/agent-card.json
+    status: 404
+    document: false
+  - path: /.well-known/agent.json
+    url: https://cmsapi.echoleads.ai/.well-known/agent.json
+    status: 404
+    document: false
+documents_found: 1
+security_txt:
+  served: true
+  expires: '2027-04-20T00:00:00.000Z'
+  canonical: https://echoleads.ai/.well-known/security.txt
+  contact:
+    - mailto:security@echoleads.ai
+    - mailto:support@echoleads.ai
+  policy: https://echoleads.ai/security-policy
+  acknowledgments: https://echoleads.ai/security-hall-of-fame
+  note: >-
+    The security.txt is a real, unexpired RFC 9116 document. Both pages it references —
+    /security-policy and /security-hall-of-fame — returned 502 on probe, so the contacts are
+    verified but the policy text behind them is not currently retrievable.
+checked: '2026-08-11'
