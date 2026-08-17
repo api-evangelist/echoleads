@@ -11,7 +11,7 @@ description: >-
   retrieve transcripts, push lead scores) but the documentation page returns 502, api.echoleads.ai has no listener, and
   no OpenAPI, AsyncAPI, GraphQL SDL, Postman collection or MCP server is published on any host.
 image: https://echoleads.ai/assets/Echoleads%20Pictorial%20Logo%201%20(1).png
-url: https://echoleads.apievangelist.com/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/echoleads/refs/heads/main/apis.yml
 created: '2026-08-10'
 modified: '2026-08-11'
 specificationVersion: '0.21'
