@@ -17,6 +17,20 @@ modified: '2026-08-11'
 specificationVersion: '0.23'
 tags:
   - AI voice sales
+  - AI Voice Agents
+  - cold calling automation
+  - AI SDR
+  - Lead Generation
+  - Conversational AI
+  - omnichannel sales automation
+  - Appointment Scheduling
+  - WhatsApp automation
+  - Instagram DM automation
+  - Voice AI
+  - Sales Automation
+  - India
+tags_raw:
+  - AI voice sales
   - AI voice agents
   - cold calling automation
   - AI SDR
@@ -41,6 +55,17 @@ apis:
     humanURL: https://echoleads.ai
     baseURL: https://echoleads.ai
     tags:
+      - AI voice sales
+      - AI Voice Agents
+      - cold calling automation
+      - AI SDR
+      - Lead Generation
+      - Conversational AI
+      - omnichannel sales automation
+      - Appointment Scheduling
+      - WhatsApp automation
+      - Instagram DM automation
+    tags_raw:
       - AI voice sales
       - AI voice agents
       - cold calling automation
