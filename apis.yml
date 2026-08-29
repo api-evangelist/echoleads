@@ -10,6 +10,17 @@ description: >-
   AI-crawler-permissive robots.txt. The API surface is not: a REST API is self-declared in llms-full.txt (trigger calls,
   retrieve transcripts, push lead scores) but the documentation page returns 502, api.echoleads.ai has no listener, and
   no OpenAPI, AsyncAPI, GraphQL SDL, Postman collection or MCP server is published on any host.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://echoleads.ai/assets/Echoleads%20Pictorial%20Logo%201%20(1).png
 url: https://raw.githubusercontent.com/api-evangelist/echoleads/refs/heads/main/apis.yml
 created: '2026-08-10'
