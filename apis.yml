@@ -117,6 +117,8 @@ generated:
   confidence: 80
   at: '2026-08-10T12:37:29.936Z'
 common:
+- type: Website
+  url: https://echoleads.ai/
 - type: VulnerabilityDisclosure
   url: security/echoleads-vulnerability-disclosure.yml
 - type: DomainSecurity
