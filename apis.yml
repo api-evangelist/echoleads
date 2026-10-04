@@ -77,7 +77,6 @@ apis:
       443 both closed, and no base URL, auth model or machine-readable contract is published anywhere. The baseURL below
       is the website root, which is what the provider publishes — it is not a verified API host.
     humanURL: https://echoleads.ai
-    baseURL: https://echoleads.ai
     tags:
       - AI voice sales
       - AI Voice Agents
